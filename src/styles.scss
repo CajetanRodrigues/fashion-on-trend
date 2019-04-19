@@ -1,10 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    margin : 0px;
-    padding :  0px;
-        height : 100vh;
-}
-#particles-js{
-    height: 100%;
-    background: red
-}
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+  .bg { 
+    /* The image used */
+    background-image: url("assets/img/Home.png");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    // background-repeat:repeat;
+    background-size: cover;
+  }
+  .header-footer{
+    font-family: 'Acme', sans-serif;
+  }
+
+ 

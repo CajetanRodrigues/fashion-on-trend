@@ -14,6 +14,11 @@ import { FeaturesComponent } from './home/body/features/features.component';
 import { TestimonialsComponent } from './home/body/testimonials/testimonials.component';
 import { ContactUsComponent } from './home/body/contact-us/contact-us.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+import { MaterialModule } from './material/material.module';
+import { InspirationComponent } from './inspiration/inspiration.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +32,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SingleBlogComponent,
     FeaturesComponent,
     TestimonialsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    InspirationComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    MaterialModule,
     AppRoutingModule,
-    
+    AnimateOnScrollModule.forRoot(),
+
+
 
   ],
   providers: [],
