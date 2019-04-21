@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-blog.component.scss']
 })
 export class SingleBlogComponent implements OnInit {
-
+ array = [1,2,3,4,5];
   constructor() { }
 
   ngOnInit() {

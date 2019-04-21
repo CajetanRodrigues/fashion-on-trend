@@ -12,17 +12,25 @@
 	</div>
 	  </nav>
 		<br><br><br><br><br> -->
-		<div  >
-		<nav    [@changeDivSize]=currentState class="navbar navbar-expand-lg  navbar-light fixed-top" style="background-color: white">
-			<a [routerLink]="['/']" class="navbar-main-links  navbar-font header-footer" href="#"><img class="img-size" height="80px" src="../../../assets/img/LOGO.png"> Fashion On Trend</a>
+		<div>
+		<nav class="shadow"   [@changeDivSize]=currentState class="navbar navbar-expand-lg  navbar-light fixed-top" >
+			<a [routerLink]="['/']" class="navbar-main-links  navbar-font header-footer" href="#"> Fashion On Trend</a>
 
-				<a [routerLink]="['/home']" class="navbar-sub-links  navbar-font header-footer" href="#">Home</a>
-				<a [routerLink]="['/blog']" class="navbar-sub-links  navbar-font header-footer" href="#">Blog</a>
-				<a [routerLink]="['/newsletter']" class="navbar-sub-links  navbar-font header-footer" href="#">Newsletter</a>
-				<a [routerLink]="['/signup']" class="navbar-sub-links  navbar-font header-footer" href="#">Signup</a>
-				<a [routerLink]="['/login']" class="navbar-sub-links  navbar-font header-footer" href="#">Login</a>
+				<a [routerLink]="['/home']" class="navbar-sub-links  navbar-font header-footer" >Home</a>
+				<a [routerLink]="['/blog']" class="navbar-sub-links  navbar-font header-footer" >Blog</a>
+				<a [routerLink]="['/newsletter']" class="navbar-sub-links  navbar-font header-footer"  >Newsletter</a>
+				<a [routerLink]="['/signup']" class="navbar-sub-links  navbar-font header-footer"  >Signup</a>
+				<a [routerLink]="['/login']" class="navbar-sub-links  navbar-font header-footer"  >Login</a>
 
-	
+				<div class="search-bar">
+						<mat-form-field class="example-form-field">
+								<input matInput type="text" placeholder="Search" [(ngModel)]="value">
+								<button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+									<mat-icon>close</mat-icon>
+								</button>
+							</mat-form-field>
+							
+				</div>
 			
 
 
@@ -46,25 +54,21 @@
 		<div  id="mySidenav" class="sidenav">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link" [routerLink]="[ '/home' ]" (click)="toggle()">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Link</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Dropdown
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">Action</a>
-						<a class="dropdown-item" href="#">Another action</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Something else here</a>
-					</div>
+					<a class="nav-link" [routerLink]="[ '/blog' ]" (click)="toggle()">Blog</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link disabled" href="#">Disabled</a>
+					<a class="nav-link" [routerLink]="[ '/newsletter' ]" (click)="toggle()">NewsLetter</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" [routerLink]="[ '/login' ]" (click)="toggle()">Login</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" [routerLink]="[ '/signup' ]" (click)="toggle()">Signup</a>
+				</li>
+			
 			</ul>
 
 		</div>

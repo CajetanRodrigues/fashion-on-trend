@@ -23,6 +23,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   isOpened = false;
+  value = ""
   constructor(@Inject(DOCUMENT) document) { }
 
   ngOnInit() {

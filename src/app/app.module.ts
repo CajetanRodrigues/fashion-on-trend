@@ -19,8 +19,10 @@ import { MaterialModule } from './material/material.module';
 import { InspirationComponent } from './inspiration/inspiration.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-
-@NgModule({
+import * as $ from 'jquery';
+import { NewsletterComponent } from './newsletter/newsletter.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+ @NgModule({
   declarations: [
     AppComponent,
     CreateBlogComponent,
@@ -35,7 +37,8 @@ import { SignupComponent } from './signup/signup.component';
     ContactUsComponent,
     InspirationComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    NewsletterComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -43,6 +46,9 @@ import { SignupComponent } from './signup/signup.component';
     MaterialModule,
     AppRoutingModule,
     AnimateOnScrollModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
+    
 
 
 
