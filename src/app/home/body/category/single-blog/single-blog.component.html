@@ -1,3 +1,6 @@
+<div class="container-fluid" style="margin-top : 50px;">
+
+
 <nav  class="breadcrumb-style">
   <ol class="breadcrumb" style="background-color: white ">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -6,10 +9,44 @@
 </nav>
 
 <div class="row">
-   
-  <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+  <div class="col-md-1 col-lg-1 col-sm-12 col-xs-12  category">
+ 
+      <div class="social-buttons sticky">     
+    <div class="row">
+                  <!-- facebook  Button -->
+        <a href="http://www.facebook.com" target="blank" class="social-margin"> 
+          <div class="social-icon facebook">
+            <i class="fa fa-facebook" aria-hidden="true"></i> 
+          </div>
+        </a>
+    </div>
+    <div class="row">
+       <!-- LinkedIn Button -->
+       <a href="http://linkedin.com/" class="social-margin" target="blank">
+        <div class="social-icon linkedin">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </div> 
+      </a>
+      </div>
+      <div class="row">
+        <!-- TwitterButton -->
+        <a href="http://twitter.com/" target="blank" class="social-margin">
+          <div class="social-icon twitter">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div> 
+        </a>
+        </div>
+
+       
+
+    </div>
+ 
+    
+  </div>
+  <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
     <!-- Main title-->
     <mat-card  class="shadow">
+       
     <div class="title">
       <p>The 14 Best Hair Products of 2018, According to Our Beauty Editors
         </p>
@@ -26,14 +63,14 @@
         </p>
       <img class="responsive" src="https://pbs.twimg.com/media/DW7HwunWsAICuhb.jpg" alt="">
     </div>
-  </mat-card>
 
-   
+
+   <hr>
     
 
     <!--Main Body-->
-    <mat-card class="shadow" *ngFor="let item of array">
-          <div class="content">
+   
+          <div class="content" *ngFor="let item of array">
       <!--title-->
         <p class="content-title">1. Tresemme Shampoo
           </p>
@@ -50,12 +87,14 @@
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis qui aperiam ad soluta minima fugit ipsa reiciendis, corrupti exercitationem. Iste tempore nemo, odit placeat odio commodi veniam nesciunt ex suscipit quaerat illo laborum officia facere ullam est recusandae perspiciatis quo necessitatibus harum, neque dolorem iusto. Numquam obcaecati animi dolorum.
         </p>
       </div>
+   
     </mat-card>
+
   </div>
 
   <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
-    <mat-card class="shadow" *ngFor="let item of array">
-        <p class="content-desc">
+    <mat-card class="shadow" >
+        <p class="content-desc" *ngFor="let item of array">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, nihil. Lorem, ipsum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam molestiae voluptates ut iste modi omnis nesciunt, cumque molestias. Omnis, a.
          </p>
     </mat-card>
@@ -63,3 +102,4 @@
 </div>
 
 
+</div>

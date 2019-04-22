@@ -14,16 +14,16 @@
 		<br><br><br><br><br> -->
 		<div>
 		<nav class="shadow"   [@changeDivSize]=currentState class="navbar navbar-expand-lg  navbar-light fixed-top" >
-			<a [routerLink]="['/']" class="navbar-main-links  navbar-font header-footer" href="#"> Fashion On Trend</a>
+			<a [routerLink]="['/']" class="navbar-main-links  navbar-font header-footer" style=" font-family: 'Merienda', cursive;"> FASHION ON TREND</a>
 
-				<a [routerLink]="['/home']" class="navbar-sub-links  navbar-font header-footer" >Home</a>
-				<a [routerLink]="['/blog']" class="navbar-sub-links  navbar-font header-footer" >Blog</a>
-				<a [routerLink]="['/newsletter']" class="navbar-sub-links  navbar-font header-footer"  >Newsletter</a>
-				<a [routerLink]="['/signup']" class="navbar-sub-links  navbar-font header-footer"  >Signup</a>
-				<a [routerLink]="['/login']" class="navbar-sub-links  navbar-font header-footer"  >Login</a>
+				<a [routerLink]="['/home']" class="navbar-sub-links  navbar-font header-footer" >HOME</a>
+				<a [routerLink]="['/blog']" class="navbar-sub-links  navbar-font header-footer" >BLOG</a>
+				<a [routerLink]="['/newsletter']" class="navbar-sub-links  navbar-font header-footer"  >NEWSLETTER</a>
+				<a [routerLink]="['/signup']" class="navbar-sub-links  navbar-font header-footer"  >SIGNUP</a>
+				<a [routerLink]="['/login']" class="navbar-sub-links  navbar-font header-footer"  >LOGIN</a>
 
 				<div class="search-bar">
-						<mat-form-field class="example-form-field">
+						<mat-form-field style="font-size: 15px; font-family: 'Merienda', cursive;" class="example-form-field">
 								<input matInput type="text" placeholder="Search" [(ngModel)]="value">
 								<button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
 									<mat-icon>close</mat-icon>
