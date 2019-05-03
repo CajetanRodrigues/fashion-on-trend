@@ -1,5 +1,12 @@
-<div class="container-fluid" style="margin-top : 50px;">
+<div class="container-fluid" style="margin-top : 12px; margin-bottom: 20px;">
 
+<div *ngIf="bookmarked==true" (click)="toggleBookmark()">
+  <img src="../../../../../assets/bookmark_black_32px.png" alt="Image not found">
+</div>
+
+<div *ngIf="bookmarked==false" (click)="toggleBookmark()">
+  <img  src="../../../../../assets/bookmark_white_32px.png" alt="Image not found">
+</div>
 
 <nav  class="breadcrumb-style">
   <ol class="breadcrumb" style="background-color: white ">
@@ -36,6 +43,7 @@
           </div> 
         </a>
         </div>
+      <div class="row"></div>
 
        
 
@@ -50,6 +58,7 @@
     <div class="title">
       <p>The 14 Best Hair Products of 2018, According to Our Beauty Editors
         </p>
+        <hr>
        <div>
    <ul class="tags">
                 <li><a href="#" class="tag">HTML</a></li>
@@ -86,10 +95,12 @@
         <p class="content-desc">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis qui aperiam ad soluta minima fugit ipsa reiciendis, corrupti exercitationem. Iste tempore nemo, odit placeat odio commodi veniam nesciunt ex suscipit quaerat illo laborum officia facere ullam est recusandae perspiciatis quo necessitatibus harum, neque dolorem iusto. Numquam obcaecati animi dolorum.
         </p>
+        <hr>
       </div>
-   
+
     </mat-card>
 
+  
   </div>
 
   <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
@@ -100,6 +111,20 @@
     </mat-card>
   </div>
 </div>
+
+
+
+
+<app-similar-posts></app-similar-posts>
+
+
+
+<app-comment-section></app-comment-section>
+
+
+
+
+
 
 
 </div>

@@ -19,6 +19,9 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTreeModule} from '@angular/material/tree';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 
 
 @NgModule({
@@ -46,9 +49,10 @@ import {MatTreeModule} from '@angular/material/tree';
     MatChipsModule,
     MatBadgeModule,
     MatSnackBarModule,
-    MatTreeModule
-
-
+    MatTreeModule,
+    MatProgressBarModule,
+    MatTabsModule,
+    MatBottomSheetModule
   ],
   exports : [
     MatButtonModule,
@@ -72,7 +76,10 @@ import {MatTreeModule} from '@angular/material/tree';
     MatChipsModule,
     MatBadgeModule,
     MatSnackBarModule,
-    MatTreeModule
+    MatTreeModule,
+    MatProgressBarModule,
+    MatTabsModule,
+    MatBottomSheetModule
   ]
 })
 export class MaterialModule { }

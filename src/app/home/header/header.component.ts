@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { DOCUMENT } from '@angular/common'; 
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -23,10 +24,24 @@ import { DOCUMENT } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   isOpened = false;
-  value = ""
+  faUser = faUser;
+  color = 'primary';
+  mode = 'indeterminate';
+  value = 50;
+  bufferValue = 75;
   constructor(@Inject(DOCUMENT) document) { }
 
   ngOnInit() {
+
+
+    $(document).ready(function() {
+      $('.nav .dropdown').hover(function() {
+          $(this).addClass('open');
+      }, function() {
+          $(this).removeClass('open');
+      });
+  });
+
   }
   currentState = 'initial';
 

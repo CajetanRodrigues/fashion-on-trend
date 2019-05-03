@@ -1,0 +1,14 @@
+<mat-card> 
+
+                <mat-form-field class="example-full-width">
+                        <textarea [(ngModel)]="comment" name="comment" matInput placeholder="Write your reponse"></textarea>
+                      </mat-form-field>
+        
+                <button mat-stroked-button color="accent"  (click)="createComment()">Publish</button>
+
+
+ </mat-card>
+
+  <div *ngFor="let item of items">
+  <mat-card>{{item}}</mat-card>
+</div>

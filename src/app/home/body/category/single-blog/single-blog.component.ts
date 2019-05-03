@@ -7,13 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingleBlogComponent implements OnInit {
  array = [1,2,3,4,5];
- 
+ bookmarked = false
 
 
 
   ngOnInit() {
     function isNumber(n) {
       return !isNaN(parseFloat(n)) && isFinite(n);
+
+
+
+
+      
     }
     
     function setFontSize(el) {
@@ -49,6 +54,24 @@ export class SingleBlogComponent implements OnInit {
         });
       
     });
+
+
+
+    //Clap section
+
+
+    
   }
 
+
+  toggleBookmark(){
+    if(this.bookmarked == false) this.bookmarked=true
+    else this.bookmarked=false
+    console.log('Bookmaked value : ' + this.bookmarked)
+
+  }
+  
+
 }
+
+

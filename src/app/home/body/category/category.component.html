@@ -1,26 +1,19 @@
-<header  style="margin-top: 50px;">
-		<h1>Top Articles</h1>
+
+<header  style="margin-top: 12px;">
+		<mat-card class="shadow" style= "margin: 7px auto"><h1>Top Articles</h1></mat-card>		
 	</header>
 	<div class="band">
-		<div class="item-1">
-			<a href="https://design.tutsplus.com/articles/international-artist-feature-malaysia--cms-26852" class="card">
-				<div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"></div>
+
+		<div class="item-2" *ngFor="let article of articles">
+			<a href="{{ article.blog_link }}" class="card">
+				<img width="300px;" class="dumb" src="{{ article.image }}" alt="No Image Found">
 				<article>
-					<h1>International Artist Feature: Malaysia</h1>
-					<span>Mary Winkler</span>
+					<h1>{{ article.title }}</h1>
+					<span>{{ article.author_name }} | {{ article.time }}</span>
 				</article>
 			</a>
 		</div>
-		<div class="item-2">
-			<a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045" class="card">
-				<div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png);"></div>
-				<article>
-					<h1>How to Conduct Remote Usability Testing</h1>
-					<span>Harry Brignull</span>
-				</article>
-			</a>
-		</div>
-		<div class="item-3">
+		<!-- <div class="item-3">
 			<a href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724" class="card">
 				<div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);"></div>
 				<article>
@@ -29,48 +22,13 @@
 					<span>Melody Nieves</span>
 				</article>
 			</a>
-		</div>
-		<div class="item-4">
-			<a href="https://webdesign.tutsplus.com/tutorials/how-to-code-a-scrolling-alien-lander-website--cms-26826" class="card">
-				<div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/landing.png);"></div>
-				<article>
-					<h1>How to Code a Scrolling “Alien Lander” Website</h1>
-					<p style="font-size: 12px;">We’ll be putting things together so that as you scroll down from the top of the page you’ll see an “Alien Lander” making its way to touch down.</p>
-					<span>Kezz Bracey</span>
-				</article>
-			</a>
-		</div>
-		<div class="item-5">
-			<a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139" class="card">
-				<div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/strange.jpg);"></div>
-				<article>
-					<h1>How to Create a “Stranger Things” Text Effect in Adobe Photoshop</h1>
-					<span>Rose</span>
-				</article>
-			</a>
-		</div>
-		<div class="item-6">
-			<a href="https://photography.tutsplus.com/articles/5-inspirational-business-portraits-and-how-to-make-your-own--cms-27338" class="card">
-				<div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg);"></div>
-				<article>
-					<h1>5 Inspirational Business Portraits and How to Make Your Own</h1>
+		</div> -->
 	
-					<span>Marie Gardiner</span>
-				</article>
-			</a>
-		</div>
-		<div class="item-7">
-			<a href="https://webdesign.tutsplus.com/articles/notes-from-behind-the-firewall-the-state-of-web-design-in-china--cms-22281" class="card">
-				<div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/china.png);"></div>
-				<article>
-					<h1>Notes From Behind the Firewall: The State of Web Design in China</h1>
-					<span>Kendra Schaefer</span>
-				</article>
-			</a>
-		</div>
 	</div>
-	<header>
-		<h1>Recent Articles</h1>
+	<!-- <header>
+		
+		<mat-card class="shadow" style= "margin: 7px auto"><h1><h1>Recent Articles</h1></h1></mat-card>		
+
 	</header>
 <div class="container">
 		
@@ -132,4 +90,4 @@
 			</div>
 	
 		
-</div>
+</div> -->

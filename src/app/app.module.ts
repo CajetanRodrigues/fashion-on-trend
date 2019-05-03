@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +21,17 @@ import { SignupComponent } from './signup/signup.component';
 import * as $ from 'jquery';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TagPageComponent } from './home/body/category/tag-page/tag-page.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BookmarkPageComponent } from './home/body/category/bookmark-page/bookmark-page.component';
+import { CommentSectionComponent } from './home/body/category/comment-section/comment-section.component';
+import { SimilarPostsComponent } from './home/body/category/similar-posts/similar-posts.component';
+import { NewStoryComponent, BottomSheetOverviewExampleSheet } from './new-story/new-story.component';
+import { MatBottomSheet } from '@angular/material';
+import { CategoryService } from './services/category.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
  @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +48,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InspirationComponent,
     LoginComponent,
     SignupComponent,
-    NewsletterComponent
-  ],
+    NewsletterComponent,
+    TagPageComponent,
+    BookmarkPageComponent,
+    CommentSectionComponent,
+    SimilarPostsComponent,
+    NewStoryComponent,
+    BottomSheetOverviewExampleSheet
+      ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -47,13 +63,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     AnimateOnScrollModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule,
+    HttpClientModule
     
 
 
 
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [MatBottomSheet,CategoryService],
+  bootstrap: [AppComponent],
+  entryComponents : [BottomSheetOverviewExampleSheet]
 })
 export class AppModule { }

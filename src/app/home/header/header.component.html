@@ -18,10 +18,39 @@
 
 				<a [routerLink]="['/home']" class="navbar-sub-links  navbar-font header-footer" >HOME</a>
 				<a [routerLink]="['/blog']" class="navbar-sub-links  navbar-font header-footer" >BLOG</a>
-				<a [routerLink]="['/newsletter']" class="navbar-sub-links  navbar-font header-footer"  >NEWSLETTER</a>
+				<!-- <a [routerLink]="['/newsletter']" class="navbar-sub-links  navbar-font header-footer"  >NEWSLETTER</a>
 				<a [routerLink]="['/signup']" class="navbar-sub-links  navbar-font header-footer"  >SIGNUP</a>
-				<a [routerLink]="['/login']" class="navbar-sub-links  navbar-font header-footer"  >LOGIN</a>
+				<a [routerLink]="['/login']" class="navbar-sub-links  navbar-font header-footer"  >LOGIN</a> -->
+				<!-- <a [routerLink]="['/home']" class="navbar-sub-links  navbar-font header-footer" >HAIR STYLE</a>
+				<a [routerLink]="['/home']" class="navbar-sub-links  navbar-font header-footer" >SKIN CARE</a>
+				<a [routerLink]="['/home']" class="navbar-sub-links  navbar-font header-footer" >HEALTH AND WELLNESS</a>
+				<a [routerLink]="['/home']" class="navbar-sub-links  navbar-font header-footer" >NEWS</a> -->
+				<a [routerLink]="['/tag-page']" class="navbar-sub-links  navbar-font header-footer" >REVIEWS</a>
+				<a [routerLink]="['/new-story']" class="navbar-sub-links  navbar-font header-footer" >NEW STORY</a>
+				<a [routerLink]="['/new-story']" class="navbar-sub-links  navbar-font header-footer" ><button mat-stroked-button color="primary">Ready to Publish?</button></a>
 
+					  
+					  <div class="nav">
+					  <div class="dropdown">
+					  <a id="drop3" role="button" href="https://www.google.com">
+						<div class="navbar-sub-links" style="text-align:center">
+								<fa-icon [icon]="faUser"></fa-icon>
+							  </div>
+					</a>
+					
+					  <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop3">
+						<li role="presentation"><a role="menuitem" href="#">Profile</a></li>
+						<li role="presentation"><a role="menuitem" >
+							<a [routerLink]="['/bookmark-page']" >BookMark</a>
+						</a></li>
+						<li role="presentation"><a role="menuitem" href="#">Settings</a></li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" href="#">Signout</a></li>
+						<li role="presentation"><a role="menuitem" href="#">Customize your interests</a></li>
+						</ul>		
+					</div>	
+				</div>
+				
 				<div class="search-bar">
 						<mat-form-field style="font-size: 15px; font-family: 'Merienda', cursive;" class="example-form-field">
 								<input matInput type="text" placeholder="Search" [(ngModel)]="value">
@@ -68,11 +97,32 @@
 				<li class="nav-item">
 					<a class="nav-link" [routerLink]="[ '/signup' ]" (click)="toggle()">Signup</a>
 				</li>
-			
+				<li>
+					<a (click)="toggle()" [routerLink]="['/tag-page']" class="navbar-sub-links  navbar-font header-footer" >REVIEWS</a>
+					<a (click)="toggle()" [routerLink]="['/new-story']" class="navbar-sub-links  navbar-font header-footer" >NEW STORY</a>
+					<a (click)="toggle()" [routerLink]="['/new-story']" class="navbar-sub-links  navbar-font header-footer" ><button mat-stroked-button color="primary">Ready to Publish?</button></a>
+	
+						  
+				</li>
+				
+				
 			</ul>
 
 		</div>
 	</div>
+
+	<!--Mat Progress Bar-->
+<div class="loader">
+	<mat-progress-bar
+	class="example-margin"
+	[color]="color"
+	[mode]="mode"
+	[value]="value"
+	[bufferValue]="bufferValue">
+</mat-progress-bar>
+</div>
+			
+		 
 		<!-- Use any element to open the sidenav
 		<span (click)="openNav()">open</span> -->
 		
